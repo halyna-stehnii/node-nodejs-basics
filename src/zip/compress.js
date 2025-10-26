@@ -6,11 +6,7 @@ import { getDirname } from "../utils/fileUtils.js";
 
 const __dirname = getDirname(import.meta.url);
 const sourceFilePath = path.join(__dirname, "files", "fileToCompress.txt");
-const destinationFilePath = path.join(
-  __dirname,
-  "files",
-  "fileToCompress.txt.gz"
-);
+const destinationFilePath = path.join(__dirname, "files", "archive.gz");
 
 const compress = async () => {
   const gzip = createGzip();
