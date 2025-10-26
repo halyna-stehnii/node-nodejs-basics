@@ -1,4 +1,4 @@
-import { getDirname } from "./fileUtils.js";
+import { getDirname } from "../utils/fileUtils.js";
 import { rename as changeName } from "fs/promises";
 
 const __dirname = getDirname(import.meta.url);

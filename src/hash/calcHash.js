@@ -1,11 +1,9 @@
 import fs from "fs";
-import { dirname } from "path";
 import path from "path";
-import { fileURLToPath } from "url";
 import crypto from "crypto";
+import { getDirname } from "../utils/fileUtils.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = getDirname(import.meta.url);
 const filePath = path.join(__dirname, "files", "fileToCalculateHashFor.txt");
 const fileStream = fs.createReadStream(filePath);
 const hash = crypto.createHash("sha256");

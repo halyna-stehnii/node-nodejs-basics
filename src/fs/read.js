@@ -1,5 +1,5 @@
 import { readFile } from "fs/promises";
-import { getDirname } from "./fileUtils.js";
+import { getDirname } from "../utils/fileUtils.js";
 
 const __dirname = getDirname(import.meta.url);
 
